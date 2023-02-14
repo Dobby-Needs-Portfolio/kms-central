@@ -6,4 +6,34 @@ spring:
       monitor:
         status-interval: 5s
         status-lifetime: 5s
+      context-path: /admin
+      client:
+        username: ${spring.security.user.name}
+        password: ${spring.security.user.password}
+        url: http://localhost:10610/admin
+
+        instance:
+          name: kms-core
+          metadata:
+            user.name: ${spring.security.user.name}
+            user.password: ${spring.security.user.password}
+
+  security:
+    user:
+      name: user
+      password: password
+
+server:
+  port: 10610
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /actuator
+
+eureka:
+  dashboard:
+    path: /msa-dashboard
 
