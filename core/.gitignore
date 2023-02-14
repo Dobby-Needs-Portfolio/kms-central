@@ -1,0 +1,3 @@
+# Profile-specific properties that defines critical information
+application-*.yml
+application-*.properties

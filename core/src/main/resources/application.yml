@@ -1,0 +1,9 @@
+# For default configurations.
+# for specific configurations, please set on profile configuration file (application-{profile}.yml)
+spring:
+  boot:
+    admin:
+      monitor:
+        status-interval: 5s
+        status-lifetime: 5s
+
